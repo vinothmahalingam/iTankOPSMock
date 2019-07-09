@@ -1,0 +1,35 @@
+{
+    "aaData": [{
+            "POR":"Jebel Ali",
+            "PFD":"Chennai",
+            "ROUTE": "AEJEA-SEA-INNSA-SEA-INMAA",
+            "EquipmentType": "20TK",
+            "SOC": "NO",
+            "QRY": "6",
+            "PRODUCT_GROUP": "Hazardous",
+            "PRODUCT": "Sodium Tetraborate Decahydrate",
+            "GR_WT": "20.00",
+            "VOLUME": "",
+            "ALL_RATES_IN_USD": "160.00",
+			"RR_TOTAL_IN_USD" : "120.00",
+			"APPROVED_IN_USD" : "15.26",
+			"STATUS" : "APPROVED"
+	    },
+        {
+            "POR":"Nhava Sheva",
+            "PFD":"Bandar Abbas",
+            "ROUTE": "INNSA-SEA-IRBND",
+            "EquipmentType": "20TK",
+            "SOC": "NO",
+            "QRY": "6",
+            "PRODUCT_GROUP": "Hazardous",
+            "PRODUCT": "Sulfur",
+            "GR_WT": "24.00",
+            "VOLUME": "",
+            "ALL_RATES_IN_USD": "260.00",
+			"RR_TOTAL_IN_USD" : "220.00",
+			"APPROVED_IN_USD" : "225.26",
+			"STATUS" : "APPROVED"
+        }
+    ]
+}

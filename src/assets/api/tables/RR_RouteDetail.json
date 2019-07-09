@@ -1,0 +1,29 @@
+{
+    "aaData": [{
+            "FromPort": "Jebel Ali",
+            "ToPort": "Nhava Sheva",
+            "TransportMode": "SEA",
+            "TransitTime": "6",
+            "AwaitingTime": "1",
+            "VeselVoyage": "KOTA WARIS-128N",
+            "Terminal": "JEA Terminal",
+            "SCN": "123",
+			"CutOffDateTime":"",
+			"ETD":"05-May-2019 16:00",
+			"ETA":"10-May-2019 18:00"
+        },
+              {
+            "FromPort": "Nhava Sheva",
+            "ToPort": "Chennai",
+            "TransportMode": "SEA",
+            "TransitTime": "4",
+            "AwaitingTime": "1",
+            "VeselVoyage": "INTERASIA PROGRESS-N020",
+            "Terminal": "NSA Terminal",
+            "SCN": "123",
+			"CutOffDateTime":"",
+			"ETD":"12-May-2019 16:00",
+			"ETA":"14-May-2019 18:00"
+        }
+    ]
+}

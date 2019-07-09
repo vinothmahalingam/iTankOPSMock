@@ -1,0 +1,43 @@
+{
+    "aaData": [{
+            "ChargeHead": "Freight Rate",
+            "VATOS": "No",
+           
+            "Currency": "AED",
+            "RateRequest": "1600.00",
+            "ApprovedRate": "1652.00",
+            "RateRequestInUSD": "449.19",
+            "ApprovedRateInUSD": "449.19"
+        },
+        {
+            "ChargeHead": "Load Terminal handling Charge",
+            "VATOS": "No",
+         
+            "Currency": "AED",
+            "RateRequest": "320.00",
+            "ApprovedRate": "320.00",
+            "RateRequestInUSD": "87.12",
+            "ApprovedRateInUSD": "87.12"
+        },
+        {
+            "ChargeHead": "Discharge Terminal handling Charge",
+            "VATOS": "No",
+            
+            "Currency": "USD",
+            "RateRequest": "42.00",
+            "ApprovedRate": "45.00",
+            "RateRequestInUSD": "42.00",
+            "ApprovedRateInUSD": "45.00"
+        },
+        {
+            "ChargeHead": "Insurance",
+            "VATOS": "No",
+            
+            "Currency": "USD",
+            "RateRequest": "20.00",
+            "ApprovedRate": "20.00",
+            "RateRequestInUSD": "20.00",
+            "ApprovedRateInUSD": "20.00"
+        }
+    ]
+}

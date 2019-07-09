@@ -1,0 +1,955 @@
+<div>
+    <p-toast position="bottom-right"></p-toast>
+    <header>
+        <h3>
+            <br>
+            <strong>Booking - <label class="badge badgeMargin" style="background-color: blue">BKNGJEAMAA1905005 -
+                    31-May-2019
+                </label></strong>
+        </h3>
+    </header>
+
+    <!-- widget div-->
+    <div>
+        <!-- widget content -->
+        <div class="widget-body fuelux">
+            <fuel-ux-wizard (complete)="onWizardComplete($event)">
+                <div class="wizard">
+                    <div class="steps-container">
+                        <ul class="steps" style="margin-left:0px!important;">
+                            <li data-step="1" class="active">
+                                <span class="badge">1</span>Booking Info<span class="chevron"></span>
+                            </li>
+                            <li data-step="2">
+                                <span class="badge">2</span>Shipment Detail<span class="chevron"></span>
+                            </li>
+                            <li data-step="3">
+                                <span class="badge">3</span>Rate Detail<span class="chevron"></span>
+                            </li>
+                            <li data-step="4">
+                                <span class="badge">4</span>Tank Allocation<span class="chevron"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="actions">
+                        <button type="button" class="btn btn-sm btn-primary btn-prev buttonMargin buttonBorder"
+                            style="margin-right:8px!important">
+                            <i class="fa fa-arrow-left"></i>Previous
+                        </button>
+                        <button type="button" class="btn btn-sm btn-success btn-next buttonMargin buttonBorder"
+                            data-last="Finish">
+                            Next<i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <form class="form-horizontal">
+
+                        <div class="step-pane active" data-step="1">
+                            <!-- <legend><strong>Step 1 </strong> - Booking Informations</legend> -->
+                            <!-- <h3></h3> -->
+
+                            <!-- wizard form starts here -->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading clearfix">
+                                    <div class="panel-title panelHeading pull-left" style="
+                                        margin-top: 6px;">
+                                        <b>Booking Information <span class='redIcon'>
+                                            </span></b> <label class="badge badgeMargin">
+                                        </label>
+                                    </div>
+                                    <div class="pull-right buttonGroup">
+                                        <button type="button" class="btn btn-default buttonMargin buttonBorder"
+                                            (click)='lgRouteModal.show()'><i class="fa fa-road violetIcon"
+                                                aria-hidden="true"></i>
+                                            Route Planning</button>
+                                     
+                                        <div bsModal #lgRouteModal="bs-modal" class="modal fade" tabindex="-1"
+                                            role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close"
+                                                            (click)="lgRouteModal.hide()" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        <h4 class="modal-title">Best Route Details</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Route</th>
+                                                                    <th scope="col">Cost in USD </th>
+                                                                    <th scope="col">Transit Days </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">AEJEA-SEA-INMAA</th>
+                                                                    <td>550.00</td>
+                                                                    <td>6</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">AEJEA-SEA-INNSA-SEA-INMAA</th>
+                                                                    <td>640.00</td>
+                                                                    <td>10</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">AEJEA-SEA-LKCMB-SEA-IMAA</th>
+                                                                    <td>600.00</td>
+                                                                    <td>8</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default"
+                                                            (click)="lgRouteModal.hide()"><i
+                                                                class="fa fa-thumbs-up"></i>
+                                                            Ok
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='container-fluid'>
+                                <!-- <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Booking No</label>
+                                    <input type="text" class="form-control" id="bookingNo" placeholder="Booking No"
+                                        value="BKNGJEAMAA1905005" required readonly>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Booking Date</label>
+                                    <div class="input-group">
+                                        <input type="text" name="mydate" placeholder="Select a date"
+                                            class="form-control datepicker" saUiDatepicker date-format="dd/mm/yy"
+                                            readonly value="31-May-2019">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div> -->
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Customer<span class='redIcon'>
+                                            *</span></label>
+                                    <select name="interested" class="form-control">
+                                        <!-- <option value="0" disabled>Select Customer</option> -->
+                                        <option value="1">EASTMAN CHEMICAL LTD.</option>
+                                        <option value="2">AFTON CHEMICAL ASIA PTE LTD.</option>
+                                        <option value="3">SUMITOMO CHEMICAL ASIA PTE LTD
+                                        </option>
+                                        <option value="4">ECOGREEN OLEOCHEMICALS (SINGAPORE) PTE LTD</option>
+
+                                        <option value="5">TJS PTE LTD</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Place of Receipt<span class='redIcon'>
+                                            *</span></label>
+                                    <select name="interested" class="form-control" aria-placeholder="Select POR">
+                                        <!-- <option value="0" disabled>Select Place of Receipt</option> -->
+                                        <option value="1">Jebel Ali</option>
+                                        <option value="2">Nhava Sheva</option>
+                                        <option value="3">Singapore</option>
+                                        <option value="4">Shanghai</option>
+                                        <option value="5">Chennai</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Place of Final Destination<span class='redIcon'>
+                                            *</span></label>
+                                    <select name="interested" class="form-control" aria-placeholder="Select POR">
+                                        <!-- <option value="0" disabled>Select Place of Destination</option> -->
+                                        <option value="1">Chennai</option>
+                                        <option value="2">Nhava Sheva</option>
+                                        <option value="3">Singapore</option>
+                                        <option value="4">Shanghai</option>
+                                        <option value="5">Jebel Ali</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Route<span class='redIcon'>
+                                            *</span></label>
+                                    <select name="interested" class="form-control" aria-placeholder="Select POR">
+                                        <option value="0">AEJEA-SEA-INNSA-SEA-INMAA</option>
+                                        <option value="1">AEJEA-SEA-INNSA</option>
+                                        <option value="2">AEJEA-SEA-LKCMB-SEA-INMAA</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Rate Reference Number</label>
+                                    <input type="text" class="form-control" id="rateReferenceNumber"
+                                        placeholder="Rate Reference Number" value="RRAGNJEA190531004" required readonly>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Shipment Date<span class='redIcon'>
+                                            *</span></label>
+                                    <div class="input-group">
+                                        <input type="text" name="mydate" placeholder="Select a date"
+                                            class="form-control datepicker" saUiDatepicker date-format="dd/mm/yy"
+                                            readonly value="05-Jun-2019">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <!-- <p-calendar [(ngModel)]="date9" showButtonBar="true" showIcon="true" dateFormat="dd.MM.yy"></p-calendar> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Shipment Terms</label>
+                                    <select name="interested" class="form-control">
+                                        <option value="1">Container Yard to Container Yard</option>
+                                        <option value="2">Container Yard to Door</option>
+                                        <option value="3">CFS to Container Yard</option>
+                                        <option value="4">Container Yard to CFS </option>
+                                        <option value="5">Door to Container Yard</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Payment Terms</label>
+                                    <select name="interested" class="form-control">
+                                        <option value="1">Prepaid</option>
+                                        <option value="2">Collect</option>
+                                        <option value="3">Foregin
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Booking Agency<span class='redIcon'>
+                                            *</span></label>
+                                    <select name="interested" class="form-control">
+                                        <option value="1">Forecastle Shipping & Logistics</option>
+                                        <option value="2">Samudera Agency</option>
+                                        <option value="3">E-Ship Agency
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Delivery Agency<span class='redIcon'>
+                                            *</span></label>
+                                    <select name="interested" class="form-control">
+                                        <option value="1">E-Ship Agency</option>
+                                        <option value="2">Forecastle Shipping & Logistics</option>
+                                        <option value="3">E-Ship Agency
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Booking Validity<span class='redIcon'>
+                                            *</span></label>
+                                    <div class="input-group">
+                                        <input type="text" name="mydate" placeholder="Select a date"
+                                            class="form-control datepicker" saUiDatepicker date-format="dd/mm/yy"
+                                            value="31-July-2019">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <!-- <p-calendar [(ngModel)]="date9" showButtonBar="true" showIcon="true" dateFormat="dd.MM.yy"></p-calendar> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Shipping Line</label>
+                                    <select name="interested" class="form-control">
+                                        <option value="1">Mediterranean Shipping Company</option>
+                                        <option value="2">China Ocean Shipping Company</option>
+                                        <option value="3">Hapag-Lloyd
+                                        </option>
+                                        <option value="4">Ocean Network Express</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Documentation Cut-Off Date</label>
+                                    <div class="input-group">
+                                        <input type="text" name="mydate" placeholder="Select a date"
+                                            class="form-control datepicker" saUiDatepicker date-format="dd/mm/yy"
+                                            value="02-June-2019">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <!-- <p-calendar [(ngModel)]="date9" showButtonBar="true" showIcon="true" dateFormat="dd.MM.yy"></p-calendar> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Product Ref.No</label>
+                                    <input type="text" class="form-control" id="rateReferenceNumber"
+                                        placeholder="Rate Reference Number" value="PRSULPHER190531001" required
+                                        readonly>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Special Comments</label>
+                                    <!-- <textarea class="form-control" id="specialComments" placeholder="Rate Reference Number" value="PRSULPHER190531001"> -->
+                                    <textarea class="form-control" placeholder="What's up?" required></textarea>
+                                </div>
+                                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                    <label class="labelText">Booking Status<span class='redIcon'>
+                                            *</span></label>
+                                    <select name="interested" class="form-control">
+                                        <option value="1">Confirmed</option>
+                                        <option value="2">Draft</option>
+                                        <option value="3">Cancelled</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-pane" data-step="2">
+                            <div class="panel panel-default">
+                                <div class="panel-heading clearfix">
+                                    <div class="panel-title panelHeading pull-left" style="
+                                        margin-top: 6px;">
+                                        <b>Shipment Detail <span class='redIcon'>
+                                            </span></b> <label class="badge badgeMargin">
+                                        </label>
+                                    </div>
+                                    <!-- <div class="pull-right buttonGroup">
+                                        <button type="button" class="btn btn-default buttonMargin buttonBorder"><i
+                                                class="fa fa-paperclip violetIcon" aria-hidden="true"
+                                                title="Attachment"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-default buttonMargin buttonBorder"
+                                            (click)='saveBooking()' title="Save"><i
+                                                class="glyphicon glyphicon-floppy-disk greenIcon"
+                                                aria-hidden="true"></i></button>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class='container-fluid'>
+                                <div class="row">
+                                    <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                        <label class="labelText">Equipment Type <span class='redIcon'>
+                                                *</span></label>
+                                        <select name="interested" class="form-control" id="">
+                                            <option value="1">20TK</option>
+                                            <option value="2">40TK</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                        <label class="labelText">Quantity<span class='redIcon'>
+                                                *</span></label>
+                                        <!-- <input class="form-control spinner-both spinner" name="spinner-currency" value="5.00" saUiSpinner="decimal"> -->
+                                        <!-- <input class="form-control spinner-left spinner .ui-corner-all2" name="spinner"
+                                            value="1" [saUiSpinner] style="border-radius: 0px"> -->
+                                        <input type="text" class="form-control" id="quantity"
+                                            placeholder="Enter Quantity" value="1" required>
+                                    </div>
+
+                                    <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                        <label class="labelText">Product Group<span class='redIcon'>
+                                                *</span></label>
+                                        <select name="interested" class="form-control" id="">
+                                            <option value="1">Hazardous</option>
+                                            <option value="2">Non-Hazardous</option>
+                                            <option value="2">Food Grade</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                        <label class="labelText">Proper Shipping Name</label>
+                                        <select name="interested" class="form-control" id="">
+                                            <option value="1">Sodium Tetraborate Decahydrate</option>
+                                            <option value="2">Sulfur</option>
+                                            <option value="2">Potassium Hydrogen Tartrate</option>
+                                        </select>
+                                    </div>
+
+
+                                    <!-- <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                        <label class="labelText">IMO Class</label>
+                                        <input type="text" class="form-control" id="productIMOClass" placeholder="Enter IMO Class" value="Subclass 2.1" required >
+                                    </div>
+                                    <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                        <label class="labelText">UN Number</label>
+                                        <input type="text" class="form-control" id="productUNNo" placeholder="Enter UN Number" value="UN 3013" required >
+                                    </div> -->
+                                    <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+
+                                        <label class="labelText">Gr. Wt. (MT)</label>
+                                        <input type="text" class="form-control" id="grossWeight"
+                                            placeholder="Enter Gross Weight" value="" required>
+                                    </div>
+                                    <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                        <label class="labelText">Volume (CBM)</label>
+                                        <input type="text" class="form-control" id="volume" placeholder="Enter Volume"
+                                            required>
+                                    </div>
+                                    <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                        <label class="labelText">SOC</label><br>
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" id="SOC" class="onoffswitch-checkbox">
+                                            <label class="onoffswitch-label" style="color:white;">
+                                                <span class="onoffswitch-inner" data-swchon-text="YES"
+                                                    data-swchoff-text="NO"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                                        <br>
+                                        <label class="labelText"> </label>
+                                        <span class="button"> <button type="button"
+                                                class="btn buttonMargin buttonBorder btn-primary" style="
+                                                margin-top: 9px;" (click)="lgCargoModal.show()"><i class=" fa fa-fire "
+                                                    aria-hidden="true "></i>
+                                                Cargo Specific</button></span>
+
+                                    </div>
+                                    <div bsModal #lgCargoModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
+                                        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" (click)="lgCargoModal.hide()"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title">Cargo Specific</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 rowSpacing ">
+                                                        <label class="labelText ">IMO Class</label>
+                                                        <input type="text " class="form-control " id="imoClass "
+                                                            placeholder="Enter IMO Class "
+                                                            value="Subclass 2.1 - Flammable Gas" required>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 rowSpacing ">
+                                                        <label class="labelText ">UN Number</label>
+                                                        <input type="text " class="form-control " id="unNumber "
+                                                            placeholder="Enter UN Number " value="UN 3013" required>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default"
+                                                        (click)="lgCargoModal.hide()">
+                                                        Cancel
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary"
+                                                        (click)="lgCargoModal.hide()"><i class="fa fa-floppy-o"></i>
+                                                        Save
+                                                    </button>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+
+                                    <div>
+                                        <div class="widget-body">
+                                            <div sa-widget [editbutton]="false" color="blueDark">
+                                                <header>
+                                                    <span class="widget-icon"> <i class="fa fa-table"></i> </span>
+                                                    <h2>Vessel Details </h2>
+                                                </header>
+                                            </div>
+                                            <div class="col-sm-12 col-md-12 col-lg-12 ">
+                                                <sa-datatable [options]="{
+                                                                ajax: 'assets/api/tables/datatables.standard.json',
+                                                     columns: [
+                                                     {data: 'POL'},
+                                                     {data: 'POD'},
+                                                     {data: 'TransportMode'},
+                                                     {data: 'TransitDays'},
+                                                     {data: 'AwaitingDays'},
+                                                     {data: 'VesselVoyage'},
+                                                     {data: 'Terminal'},
+                                                     {data: 'ETDDateTime'},
+                                                     {data: 'ETADateTime'}
+                                                     ],
+                                                     buttons: [
+                                                     'colvis'
+                                                     ]
+                                                     }" tableClass="table table-striped table-bordered table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>From Port</th>
+                                                            <th>To Port</th>
+                                                            <th data-hide="phone,tablet">Transport Mode</th>
+
+                                                            <th data-hide="phone,tablet">Transit Days</th>
+                                                            <th data-hide="phone,tablet">Awaiting Days</th>
+                                                            <th data-class="expand">Vessel Voyage</th>
+                                                            <th data-hide="phone,tablet">Terminal</th>
+                                                            <th data-hide="phone,tablet">ETD Date & Time</th>
+                                                            <th data-hide="phone,tablet">ETA Date & Time</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                </sa-datatable>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-pane" data-step="3">
+                            <div class="panel panel-default">
+                                <div class="panel-heading clearfix">
+                                    <div class="panel-title panelHeading pull-left" style="
+                                        margin-top: 6px;">
+                                        <b>Rate Detail <span class='redIcon'>
+                                            </span></b> <label class="badge badgeMargin">
+                                        </label>
+                                    </div>
+                                    <div class="pull-right buttonGroup">
+                                        <!-- <button type="button" class="btn btn-default buttonMargin buttonBorder"><i
+                                                class="fa fa-paperclip violetIcon" aria-hidden="true"></i>
+                                            Attachment</button>
+                                        <button type="button" class="btn btn-default buttonMargin buttonBorder" (click)='saveBooking()'><i class="glyphicon glyphicon-floppy-disk greenIcon"
+                                                aria-hidden="true"></i> Save</button> -->
+                                        <button type="button" class="btn btn-default buttonMargin buttonBorder"
+                                            (click)="lgModal.show()"><i class=" fa fa-gift " aria-hidden="true "></i>
+                                            Free Days</button>
+                                        <button type="button " class="btn btn-default buttonMargin buttonBorder "
+                                            (click)='lgDetentionModal.show()'><i class="fa fa-money "
+                                                aria-hidden="true "></i>
+                                            Detention</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='container-fluid'>
+                                <div class="row ">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 rowSpacing ">
+                                        <label class="labelText ">Charge Element<span class='redIcon'>
+                                                *</span></label>
+                                        <select name="interested " class="form-control " id=" ">
+                                            <option value="1">Freight Rate</option>
+                                            <option value="2">Surcharge</option>
+                                            <option value="3">Insurance</option>
+                                            <option value="4">Load Terminal handling Charge</option>
+                                            <option value="5">Discharge Terminal handling Charge</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 rowSpacing ">
+                                        <label class="labelText ">Currency<span class='redIcon'>
+                                                *</span></label>
+                                        <!-- <input class="form-control spinner-both spinner " name="spinner-currency " value="5.00 " saUiSpinner="decimal "> -->
+                                        <select name="interested " class="form-control " id=" ">
+                                            <option value="1 ">USD</option>
+                                            <option value="2 ">AED</option>
+                                            <option value="2 ">INR</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 rowSpacing ">
+                                        <label class="labelText ">Amount<span class='redIcon'>
+                                                *</span></label>
+                                        <input type="text " class="form-control " id="amount "
+                                            placeholder="Enter amount " value=" " required>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 rowSpacing ">
+                                        <label class="labelText ">Total Amount</label>
+                                        <input type="text " class="form-control " id="totalamount "
+                                            placeholder="Enter total amount " value="380 " required readonly>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 rowSpacing ">
+                                        <label class="labelText ">Payment Terms</label>
+                                        <select name="interested " class="form-control " id=" ">
+                                            <option value="1 ">PREPAID</option>
+                                            <option value="2 ">COLLECT</option>
+                                            <option value="2 ">FOREIGN</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 rowSpacing ">
+                                        <label class="labelText ">Pay Location</label>
+                                        <select name="interested " class="form-control " id=" ">
+                                            <option value="1 ">Jebel Ali</option>
+                                            <option value="2 ">Nhava Sheva</option>
+                                            <option value="2 ">Singapore</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 rowSpacing ">
+                                        <label class="labelText ">Pay By</label>
+                                        <select name="interested " class="form-control " id=" ">
+                                            <option value="1 ">Shipper</option>
+                                            <option value="2 ">Consignee</option>
+                                            <option value="2 ">Notify Party</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 rowSpacing ">
+                                        <!-- <label class="labelText ">Freight/Local</label><br>
+                                        <div class="onoffswitch ">
+                                            <input type="checkbox " id="transportationToWarehouse " class="onoffswitch-checkbox " checked="false ">
+                                            <label class="onoffswitch-label " style="color:white; ">
+                                                    <span class="onoffswitch-inner " data-swchon-text="Freight "
+                                                        data-swchoff-text="Local "></span>
+                                                    <span class="onoffswitch-switch "></span>
+                                                </label>
+                                        </div> -->
+                                        <br>
+                                        <button type="button"
+                                            class="btn btn-default buttonMargin buttonBorder btn-success" style="
+                                        margin-top: 9px;" (click)="lgModal.show()"><i class=" fa fa-plus "
+                                                aria-hidden="true "></i>
+                                            Add Charge</button>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div>
+                                        <div class="widget-body ">
+                                            <!-- <div sa-widget [editbutton]="false " color="blueDark ">
+                                                <header>
+                                                    <span class="widget-icon "> <i class="fa fa-table "></i> </span>
+                                                    <h2>Rate Details </h2>
+                                                </header>
+                                            </div> -->
+                                            <div class="col-sm-12 col-md-12 col-lg-12 ">
+                                                <sa-datatable
+                                                    [options]="{ ajax: 'assets/api/tables/ratedetails.json', columns: [ {data: 'TariffReferenceNo'}, {data: 'ChargeElement'}, {data: 'Currency'}, {data: 'Amount'}, {data: 'TotalAmount'}, {data:
+                                            'ExchangeRate'}, {data: 'Amountincompanycurrency'}, {data: 'PaymentTerms'}, {data: 'PayLocation'}, {data: 'PayBy'}, {data: 'RateType'} ], buttons: [ 'colvis' ] } "
+                                                    tableClass="table table-striped table-bordered table-hover ">
+                                                    <thead>
+                                                        <tr>
+                                                            <th data-hide="phone,tablet ">Tariff Reference No</th>
+                                                            <th>Charge Element</th>
+                                                            <th data-hide="phone,tablet ">Currency</th>
+                                                            <th data-class="expand ">Amount</th>
+                                                            <th data-hide="phone,tablet ">Total Amount</th>
+                                                            <th data-hide="phone,tablet ">Exchange Rate</th>
+                                                            <th>Amount in USD</th>
+                                                            <th data-hide="phone,tablet ">Payment Terms</th>
+                                                            <th data-hide="phone,tablet ">Pay Location</th>
+                                                            <th data-hide="phone,tablet ">Pay By</th>
+                                                            <th data-hide="phone,tablet ">Edit</th>
+                                                        </tr>
+                                                    </thead>
+                                                </sa-datatable>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
+                                aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" (click)="lgModal.hide()"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 class="modal-title">Detention Free Days</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 rowSpacing ">
+                                                <label class="labelText ">Free Days for Port of Loading</label>
+                                                <input type="text " class="form-control " id="totalamount "
+                                                    placeholder="Enter total amount " value="7" required readonly>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 rowSpacing ">
+                                                <label class="labelText ">Free Days for Port of Discharge</label>
+                                                <input type="text " class="form-control " id="totalamount "
+                                                    placeholder="Enter total amount " value="21" required readonly>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" (click)="lgModal.hide()">
+                                                Cancel
+                                            </button>
+                                            <button type="button" class="btn btn-primary" (click)="lgModal.hide()"><i
+                                                    class="fa fa-floppy-o"></i>
+                                                Save
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div bsModal #lgDetentionModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
+                                aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" (click)="lgDetentionModal.hide()"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 class="modal-title">Detention Details</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <label class="labelText ">Export Detention</label>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Up to Days</th>
+                                                            <th scope="col">Rate </th>
+                                                            <th scope="col">Comments </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">20</th>
+                                                            <td>50.00</td>
+                                                            <td>NA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">40</th>
+                                                            <td>80.00</td>
+                                                            <td>NA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">999</th>
+                                                            <td>100.00</td>
+                                                            <td>NA</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <label class="labelText ">Import Detention</label>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Up to Days</th>
+                                                            <th scope="col">Rate </th>
+                                                            <th scope="col">Comments </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">20</th>
+                                                            <td>55.00</td>
+                                                            <td>NA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">40</th>
+                                                            <td>85.00</td>
+                                                            <td>NA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">999</th>
+                                                            <td>110.00</td>
+                                                            <td>NA</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default"
+                                                (click)="lgDetentionModal.hide()">
+                                                Cancel
+                                            </button>
+                                            <button type="button" class="btn btn-primary"
+                                                (click)="lgDetentionModal.hide()"><i class="fa fa-floppy-o"></i>
+                                                Save
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="step-pane" data-step="4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading clearfix">
+                                    <div class="panel-title panelHeading pull-left" style="
+                                        margin-top: 6px;">
+                                        <b>Total Tanks in Jebel Ali <span class='redIcon'>
+                                            </span></b> <label class="badge badgeMargin"> 800
+                                        </label>
+                                    </div>
+                                    <div class="pull-right buttonGroup">
+                                            <button type="button"
+                                            class="btn btn-default buttonMargin buttonBorder  btn-info"
+                                            title="Attachment"><i class="fa fa-paperclip violetIcon"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="btn btn-default buttonMargin buttonBorder btn-warning"
+                                            title="Print"><i class="fa fa-print violetIcon"
+                                                aria-hidden="true"></i></button>
+                                        <button type="button"
+                                            class="btn btn-default buttonMargin buttonBorder btn-success"
+                                            (click)='saveBooking()' title="Save"><i
+                                                class="glyphicon glyphicon-floppy-disk greenIcon"
+                                                aria-hidden="true"></i></button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='container-fluid'>
+                                <div class="row ">
+                                    <div class="col-md-6 col-lg-6 col-sm-12" saEasyPieChartContainer>
+                                        <ul class="list-inline">
+                                            <li>
+                                                <legend>JTS - <label class="badge badgeMargin"> 320
+                                                    </label></legend>&nbsp;&nbsp;&nbsp;
+
+                                                <div class="easy-pie-chart txt-color-greenLight easyPieChart"
+                                                    data-percent="40" data-size="100" data-pie-size="100">
+                                                    <span
+                                                        class="percent percent-sign txt-color-greenLight font-lg semi-bold">40%</span>
+                                                </div>
+
+                                            </li>
+                                            <li>
+                                                <legend>MECRC - <label class="badge badgeMargin"> 240
+                                                    </label></legend>&nbsp;&nbsp;&nbsp;
+                                                <div class="easy-pie-chart txt-color-red easyPieChart" data-percent="30"
+                                                    data-pie-size="100">
+                                                    <span
+                                                        class="percent percent-sign txt-color-red font-lg semi-bold">30%</span>
+                                                </div>
+                                                &nbsp;&nbsp;&nbsp;
+                                            </li>
+                                            <li>
+                                                <legend>Sahreej - <label class="badge badgeMargin"> 160
+                                                    </label></legend>&nbsp;&nbsp;&nbsp;
+                                                <div class="easy-pie-chart txt-color-pinkDark easyPieChart"
+                                                    data-percent="20" data-pie-size="100">
+                                                    <span
+                                                        class="percent percent-sign txt-color-pinkDark font-lg semi-bold">20%</span>
+                                                </div>
+                                                &nbsp;&nbsp;&nbsp;
+                                            </li>
+                                            <li>
+                                                <legend>Stolt - <label class="badge badgeMargin"> 80
+                                                    </label></legend>&nbsp;&nbsp;&nbsp;
+                                                <div class="easy-pie-chart txt-color-blue easyPieChart"
+                                                    data-percent="10" data-pie-size="100">
+                                                    <span
+                                                        class="percent percent-sign txt-color-blue font-lg semi-bold">10%</span>
+                                                </div>
+                                                &nbsp;&nbsp;&nbsp;
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div>
+                                        <div class="widget-body ">
+                                            <!-- <div sa-widget [editbutton]="false " color="blueDark ">
+                                                        <header>
+                                                            <span class="widget-icon "> <i class="fa fa-table "></i> </span>
+                                                            <h2>Rate Details </h2>
+                                                        </header>
+                                                    </div> -->
+                                            <div class="col-sm-12 col-md-12 col-lg-12 ">
+                                                <sa-datatable
+                                                    [options]="{ ajax: 'assets/api/tables/tankDetail.json', columns:
+                                                 [ {data: 'EquipmentNumber'}, {data: 'Depot'}, {data: 'TestDue'}, {data: 'DamagedStatus'}, {data: 'TankCategory'}, {data: 'IdleDays'}, {data:
+                                                    'CubicCapacity'}, {data: 'LastCargo'}, {data: 'PickUpDate'}, {data: 'Select'} ], buttons: [ 'colvis' ] } "
+                                                    tableClass="table table-striped table-bordered table-hover ">
+                                                    <thead>
+                                                        <tr>
+                                                            <th data-class="expand">Equipment Number</th>
+                                                            <th data-class="expand">Depot</th>
+                                                            <th>Test Due</th>
+                                                            <th data-hide="phone,tablet ">Damaged Status</th>
+                                                            <th data-hide="phone,tablet ">Tank Category</th>
+
+                                                            <th data-hide="phone,tablet ">Idle Days</th>
+                                                            <th data-hide="phone,tablet ">Cubic Capacity</th>
+                                                            <th data-hide="phone,tablet ">Last Cargo</th>
+                                                            <th data-hide="phone,tablet ">PickUp Date</th>
+                                                            <th>Select</th>
+                                                        </tr>
+                                                    </thead>
+                                                </sa-datatable>
+                                            </div>
+                                        </div>
+                                        <div bsModal #lgLastCargoModel="bs-modal" class="modal fade" tabindex="-1"
+                                            role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close"
+                                                            (click)="lgLastCargoModel.hide()" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        <h4 class="modal-title">Detention Details</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                                            <label class="labelText ">Export Detention</label>
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Up to Days</th>
+                                                                        <th scope="col">Rate </th>
+                                                                        <th scope="col">Comments </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">20</th>
+                                                                        <td>50.00</td>
+                                                                        <td>NA</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">40</th>
+                                                                        <td>80.00</td>
+                                                                        <td>NA</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">999</th>
+                                                                        <td>100.00</td>
+                                                                        <td>NA</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                                            <label class="labelText ">Import Detention</label>
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Up to Days</th>
+                                                                        <th scope="col">Rate </th>
+                                                                        <th scope="col">Comments </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">20</th>
+                                                                        <td>55.00</td>
+                                                                        <td>NA</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">40</th>
+                                                                        <td>85.00</td>
+                                                                        <td>NA</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">999</th>
+                                                                        <td>110.00</td>
+                                                                        <td>NA</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default"
+                                                            (click)="lgLastCargoModel.hide()"><i
+                                                                class="fa fa-thumbs-up"></i>
+                                                            Ok
+                                                        </button>
+                                                        <!-- <button type="button" class="btn btn-primary"
+                                                        (click)="lgLastCargoModel.hide()"><i class="fa fa-floppy-o"></i>
+                                                        Save
+                                                    </button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </form>
+                </div>
+            </fuel-ux-wizard>
+        </div>
+        <!-- end widget content -->
+
+    </div>
+    <!-- end widget div -->
+</div>

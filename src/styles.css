@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* #GOOGLE FONT */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700");
+.labelText {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.rowSpacing {
+    height: 75px;
+}
+
+.spinner {
+    background-color: #ffffff;
+    color: #cccccc;
+}
+.redIcon{
+    color: red
+}
+
+.ui-corner-all2 {
+    -moz-border-radius: opx;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+  .previousstyle{
+      margin-right: 8px;
+  }

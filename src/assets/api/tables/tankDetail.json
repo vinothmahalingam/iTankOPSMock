@@ -1,0 +1,134 @@
+{
+    "aaData": [{
+            "EquipmentNumber": "EXFU2501995",
+            "TestDue": "31-12-2019",
+            "Depot":"JTS",
+            "DamagedStatus": "NO",
+            "TankCategory": "Hazardous",
+            "IdleDays": "324",
+            "CubicCapacity": "4000.00",
+            "LastCargo": "<a href='#' (click)='lgLastCargoModel.show()'><i class='fa fa-truck'></i> Last Cargo </a>",
+            "PickUpDate": "03-Jun-2019",
+            "Select": " <input type='checkbox' name='checkbox-inline' checked='true'>"
+         
+        },
+        {
+            "EquipmentNumber": "EXFU2503405",
+            "TestDue": "15-03-2020",
+            "Depot":"JTS",
+            "DamagedStatus": "NO",
+            "TankCategory": "Hazardous",
+            "IdleDays": "90",
+            "CubicCapacity": "4000.00",
+            "LastCargo": "<a href='#' (click)='lgLastCargoModel.show()'><i class='fa fa-truck'></i> Last Cargo </a>",
+            "PickUpDate": "03-Jun-2019",
+            "Select": " <input type='checkbox' name='checkbox-inline' checked='true'>"
+        },
+        {
+            "EquipmentNumber": "EXFU2503426",
+            "TestDue": "15-03-2020",
+            "Depot":"JTS",
+            "DamagedStatus": "NO",
+            "TankCategory": "Food Grade",
+            "IdleDays": "90",
+            "CubicCapacity": "4000.00",
+            "LastCargo": "<a href='#' (click)='lgLastCargoModel.show()'><i class='fa fa-truck'></i> Last Cargo </a>",
+            "PickUpDate": "",
+            "Select": " <input type='checkbox' name='checkbox-inline'>"
+        },
+        {
+            "EquipmentNumber": "EXFU2503447",
+            "TestDue": "31-11-2022",
+            "Depot":"JTS",
+            "DamagedStatus": "NO",
+            "TankCategory": "Hazardous",
+            "IdleDays": "10",
+            "CubicCapacity": "4000.00",
+            "LastCargo": "<a href='#' (click)='lgLastCargoModel.show()'><i class='fa fa-truck'></i> Last Cargo </a>",
+            "PickUpDate": "03-Jun-2019",
+            "Select": " <input type='checkbox' name='checkbox-inline' checked='true'>"
+         
+        },
+        {
+            "EquipmentNumber": "EXFU2503508",
+            "TestDue": "15-03-2020",
+            "Depot":"JTS",
+            "DamagedStatus": "NO",
+            "TankCategory": "Hazardous",
+            "IdleDays": "90",
+            "CubicCapacity": "4000.00",
+            "LastCargo": "<a href='#' (click)='lgLastCargoModel.show()'><i class='fa fa-truck'></i> Last Cargo </a>",
+            "PickUpDate": "03-Jun-2019",
+            "Select": " <input type='checkbox' name='checkbox-inline' checked='true'>"
+        },
+        {
+            "EquipmentNumber": "EXFU2503452",
+            "TestDue": "15-03-2020",    
+            "Depot":"JTS",
+            "DamagedStatus": "NO",
+            "TankCategory": "Food Grade",
+            "IdleDays": "90",
+            "CubicCapacity": "4000.00",
+            "LastCargo": "<a href='#' (click)='lgLastCargoModel.show()'><i class='fa fa-truck'></i> Last Cargo </a>",
+            "PickUpDate": "",
+            "Select": " <input type='checkbox' name='checkbox-inline'>"
+        },
+        {
+            "EquipmentNumber": "EXFU2503468",
+            "TestDue": "15-03-2020",
+            "Depot":"JTS",
+            "DamagedStatus": "NO",
+            "TankCategory": "Food Grade",
+            "IdleDays": "90",
+            "CubicCapacity": "4000.00",
+            "LastCargo": "<a href='#' (click)='lgLastCargoModel.show()'><i class='fa fa-truck'></i> Last Cargo </a>",
+            "PickUpDate": "",
+            "Select": " <input type='checkbox' name='checkbox-inline'>"
+        },{
+            "EquipmentNumber": "EXFU2503489",
+            "TestDue": "15-03-2020",
+            "Depot":"CCC",
+            "DamagedStatus": "NO",
+            "TankCategory": "Hazardous",
+            "IdleDays": "90",
+            "CubicCapacity": "4000.00",
+            "LastCargo": "<a href='#' (click)='lgLastCargoModel.show()'><i class='fa fa-truck'></i> Last Cargo </a>",
+            "PickUpDate": "03-Jun-2019",
+            "Select": " <input type='checkbox' name='checkbox-inline' checked='true'>"
+        },{
+            "EquipmentNumber": "EXFU2503494",
+            "TestDue": "15-03-2020",
+            "Depot":"JTS",
+            "DamagedStatus": "NO",
+            "TankCategory": "Hazardous",
+            "IdleDays": "90",
+            "CubicCapacity": "4000.00",
+            "LastCargo": "<a href='#' (click)='lgLastCargoModel.show()'><i class='fa fa-truck'></i> Last Cargo </a>",
+            "PickUpDate": "",
+            "Select": " <input type='checkbox' name='checkbox-inline'>"
+        },{
+            "EquipmentNumber": "EXFU2503513",
+            "TestDue": "15-03-2020",
+            "Depot":"SINOTRANS",
+            "DamagedStatus": "NO",
+            "TankCategory": "Hazardous",
+            "IdleDays": "90",
+            "CubicCapacity": "4000.00",
+            "LastCargo": "<a href='#' (click)='lgLastCargoModel.show()'><i class='fa fa-truck'></i> Last Cargo </a>",
+            "PickUpDate": "03-Jun-2019",
+            "Select": " <input type='checkbox' name='checkbox-inline' checked='true'>"
+        },{
+            "EquipmentNumber": "EXFU2502008",
+            "TestDue": "15-03-2020",
+            "Depot":"CCC",
+            "DamagedStatus": "NO",
+            "TankCategory": "Hazardous",
+            "IdleDays": "90",
+            "CubicCapacity": "4000.00",
+            
+            "LastCargo": "<section><a href='#' (click)='LastCargoBooking()'><i class='fa fa-truck'></i> Last Cargo </a></section>",
+            "PickUpDate": "",
+            "Select": " <input type='checkbox' name='checkbox-inline' (click)='LastCargoBooking()'>"
+        }
+    ]
+}

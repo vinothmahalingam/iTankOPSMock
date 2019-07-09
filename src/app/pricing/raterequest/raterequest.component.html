@@ -1,0 +1,828 @@
+<div>
+  <header>
+    <h3>
+      <br>
+      <strong>Rate Request : <label class="badge badgeMargin" style="background-color: blue"> RRAGNJEA190531004 -
+          31-May-2019
+        </label> </strong>
+    </h3>
+  </header>
+
+  <div>
+    <!-- widget content -->
+    <div class="widget-body fuelux">
+      <fuel-ux-wizard (complete)="onWizardComplete($event)">
+        <div class="wizard">
+          <div class="steps-container">
+            <ul class="steps">
+              <li data-step="1" class="active">
+                <span class="badge">1</span>Basic Detail<span class="chevron"></span>
+              </li>
+              <li data-step="2">
+                <span class="badge">2</span>Shipment Detail<span class="chevron"></span>
+              </li>
+              <li data-step="3">
+                <span class="badge">3</span>Rate Detail<span class="chevron"></span>
+              </li>
+              <li data-step="4">
+                <span class="badge">4</span>Route Detail<span class="chevron"></span>
+              </li>
+
+            </ul>
+          </div>
+          <div class="actions">
+            <button type="button" class="btn btn-sm btn-primary btn-prev buttonMargin buttonBorder"
+              style="margin-right:8px!important">
+              <i class="fa fa-arrow-left"></i>Previous
+            </button>
+            <button type="button" class="btn btn-sm btn-success btn-next buttonMargin buttonBorder" data-last="Finish">
+              Next<i class="fa fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </div>
+        <div class="step-content">
+          <form class="form-horizontal">
+            <div class="step-pane active" data-step="1">
+              <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                  <div class="panel-title panelHeading pull-left" style="
+                    margin-top: 6px;">
+                    <b>Rate Information <span class='redIcon'>
+                      </span></b> <label class="badge badgeMargin">
+                    </label>
+                  </div>
+               
+                </div>
+              </div>
+
+              <div class='container-fluid'>
+                <!-- <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">RR No</label>
+                  <input type="text" class="form-control" id="rrNumber" placeholder="RR No" value="RRAGNJEA190531004"
+                    required readonly>
+                </div>
+
+                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">RR Date</label>
+                  <div class="input-group">
+                    <input type="text" name="rrDate" id="rrDate" placeholder="Select a date"
+                      class="form-control datepicker" saUiDatepicker date-format="dd/mm/yy" readonly value="31-May-2019"
+                      readonly>
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i>
+                    </span>
+                  </div>
+                </div> -->
+
+                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">Customer<span class='redIcon'>
+                      *</span></label>
+                  <select name="customer" id="customer" class="form-control">
+                    <option value="1">EASTMAN CHEMICAL LTD</option>
+                    <option value="2">AFTON CHEMICAL ASIA PTE LTD.</option>
+                    <option value="3">SUMITOMO CHEMICAL ASIA PTE LTD</option>
+                    <option value="4">ECOGREEN OLEOCHEMICALS (SINGAPORE) PTE LTD</option>
+                    <option value="5">TJS PTE LTD</option>
+                  </select>
+                </div>
+
+                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">Estimated Sailing Date</label>
+                  <div class="input-group">
+                    <input type="text" name="estimateSailingDate" id="estimateSailingDate" placeholder="Select a date"
+                      class="form-control datepicker" saUiDatepicker date-format="dd/mm/yy" readonly value="05-Jun-2019"
+                      readonly>
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i>
+                    </span>
+                  </div>
+                </div>
+
+
+                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">Sale Person</label>
+                  <select name="salesPerson" id="salesPerson" class="form-control">
+                    <option value="1">Alex</option>
+                    <option value="2">Beni</option>
+                    <option value="3">Dairy Caterian</option>
+                    <option value="4">Fazil</option>
+                    <option value="5">George</option>
+                  </select>
+                </div>
+
+
+                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">Valid From<span class='redIcon'>
+                      *</span></label>
+                  <div class="input-group">
+                    <input type="text" name="validFrom" id="validFrom" placeholder="Select a date"
+                      class="form-control datepicker" saUiDatepicker date-format="dd/mm/yy" readonly value="31-May-2019"
+                      readonly>
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">Valid To<span class='redIcon'>
+                      *</span></label>
+                  <div class="input-group">
+                    <input type="text" name="validTo" id="validTo" placeholder="Select a date"
+                      class="form-control datepicker" saUiDatepicker date-format="dd/mm/yy" readonly value="30-Jun-2019"
+                      readonly>
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">Agency<span class='redIcon'>
+                      *</span></label>
+                  <select name="agency" id="agency" class="form-control">
+                    <option value="1">Forecastle Shipping & Logistics</option>
+                    <option value="2">Samudera Agency</option>
+                    <option value="3">E-Ship Agency
+                    </option>
+                  </select>
+                </div>
+
+                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">Shipper</label>
+                  <select name="Shipper" id="Shipper" class="form-control">
+                    <option value="1">EASTMAN CHEMICAL LTD</option>
+                    <option value="2">AFTON CHEMICAL ASIA PTE LTD.</option>
+                    <option value="3">SUMITOMO CHEMICAL ASIA PTE LTD</option>
+                    <option value="4">ECOGREEN OLEOCHEMICALS (SINGAPORE) PTE LTD</option>
+                    <option value="5">TJS PTE LTD</option>
+                  </select>
+                </div>
+
+                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">Consignee</label>
+                  <select name="Consignee" id="Consignee" class="form-control">
+                    <option value="1">AFTON CHEMICAL ASIA PTE LTD.</option>
+                    <option value="2">EASTMAN CHEMICAL LTD</option>
+
+                    <option value="3">SUMITOMO CHEMICAL ASIA PTE LTD</option>
+                    <option value="4">ECOGREEN OLEOCHEMICALS (SINGAPORE) PTE LTD</option>
+                    <option value="5">TJS PTE LTD</option>
+                  </select>
+                </div>
+
+
+                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">Status<span class='redIcon'>
+                      *</span></label>
+                  <select name="Status" id="Status" class="form-control">
+                    <option value="1">Approved</option>
+                    <option value="2">Sent for Approval</option>
+                    <option value="3">Draft</option>
+                    <option value="4">Counter</option>
+                    <option value="5">Cancel</option>
+                  </select>
+                </div>
+
+                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">Shipment Terms</label>
+                  <select name="shipmentTerm" class="form-control">
+                    <option value="1">Container Yard to Container Yard</option>
+                    <option value="2">Container Yard to Door</option>
+                    <option value="3">CFS to Container Yard</option>
+                    <option value="4">Container Yard to CFS </option>
+                    <option value="5">Door to Container Yard</option>
+                  </select>
+                </div>
+
+                <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                  <label class="labelText">Shipping Line</label>
+                  <select name="shippingLine" class="form-control">
+                    <option value="1">Mediterranean Shipping Company</option>
+                    <option value="2">China Ocean Shipping Company</option>
+                    <option value="3">Hapag-Lloyd
+                    </option>
+                    <option value="4">Ocean Network Express</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="step-pane" data-step="2">
+              <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                  <div class="panel-title panelHeading pull-left" style="
+                  margin-top: 6px;">
+                    <b>Shipment Detail <span class='redIcon'>
+                      </span></b> <label class="badge badgeMargin">
+                    </label>
+                  </div>
+                  <div class="pull-right buttonGroup">
+                    <button type="button" class="btn btn-default buttonMargin buttonBorder"
+                      (click)='lgRouteModal.show()'><i class="fa fa-road violetIcon" aria-hidden="true"></i>
+                      Route Planning</button>
+                    <!-- <button type="button" class="btn btn-default buttonMargin buttonBorder"><i
+                        class="fa fa-paperclip violetIcon" aria-hidden="true" title="Attachment"></i>
+                      </button>
+                    <button type="button" class="btn btn-default buttonMargin buttonBorder" (click)='saveBooking()'><i
+                        class="glyphicon glyphicon-floppy-disk greenIcon" aria-hidden="true" title="Save"></i></button> -->
+
+                    <div bsModal #lgRouteModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
+                      aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" (click)="lgRouteModal.hide()" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title">Best Route Details</h4>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Route</th>
+                                  <th scope="col">Cost in USD </th>
+                                  <th scope="col">Transit Days </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">AEJEA-SEA-INMAA</th>
+                                  <td>550.00</td>
+                                  <td>6</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">AEJEA-SEA-INNSA-SEA-INMAA</th>
+                                  <td>640.00</td>
+                                  <td>10</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">AEJEA-SEA-LKCMB-SEA-IMAA</th>
+                                  <td>600.00</td>
+                                  <td>8</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" (click)="lgRouteModal.hide()"><i
+                                class="fa fa-thumbs-up"></i>
+                              Ok
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='container-fluid'>
+                <div class="row">
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Place of Receipt</label>
+                    <select name="interested" class="form-control" aria-placeholder="Select POR">
+                      <!-- <option value="0" disabled>Select Place of Receipt</option> -->
+                      <option value="1">Jebel Ali</option>
+                      <option value="2">Nhava Sheva</option>
+                      <option value="3">Singapore</option>
+                      <option value="4">Shanghai</option>
+                      <option value="5">Chennai</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Place of Final Destination</label>
+                    <select name="interested" class="form-control" aria-placeholder="Select POR">
+                      <!-- <option value="0" disabled>Select Place of Destination</option> -->
+                      <option value="1">Chennai</option>
+                      <option value="2">Nhava Sheva</option>
+                      <option value="3">Singapore</option>
+                      <option value="4">Shanghai</option>
+                      <option value="5">Jebel Ali</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Route</label>
+                    <select name="route" class="form-control" aria-placeholder="Select Route">
+                      <option value="0">AEJEA-SEA-INNSA-SEA-INMAA</option>
+                      <option value="1">AEJEA-SEA-INNSA</option>
+                      <option value="2">AEJEA-SEA-LKCMB-SEA-INMAA</option>
+                    </select>
+                  </div>
+
+                  <!-- <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Equipment Type</label>
+                    <select name="equipmentType" class="form-control" aria-placeholder="Select POR">
+                      <option value="0">AEJEA-SEA-INNSA-SEA-INMAA</option>
+                      <option value="1">AEJEA-SEA-INNSA</option>
+                      <option value="2">AEJEA-SEA-LKCMB-SEA-INMAA-</option>
+                    </select>
+                  </div> -->
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Equipment Type</label>
+                    <select name="equipmentType" class="form-control" id="">
+                      <option value="1">20TK</option>
+                      <option value="2">40TK</option>
+                    </select>
+                  </div>
+
+
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Requested Quantity</label>
+                    <!-- <input class="form-control spinner-left spinner" name="spinner" value="1" [saUiSpinner]> -->
+                    <input type="text" class="form-control" id="quantity" placeholder="Enter Quantity" value="1"
+                      required>
+                  </div>
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Product Group</label>
+                    <select name="productGroup" class="form-control" id="">
+                      <option value="1">Hazardous</option>
+                      <option value="2">Non-Hazardous</option>
+                      <option value="2">Food Grade</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Proper Shipping Name</label>
+                    <select name="interested" class="form-control" id="">
+                      <option value="1">Sodium Tetraborate Decahydrate</option>
+                      <option value="2">Sulfur</option>
+                      <option value="3">Potassium Hydrogen Tartrate</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">IMO Class</label>
+                    <input type="text" class="form-control" id="imoClass" placeholder="IMO Class"
+                      value="Subclass 2.1 - Flammable Gas" required>
+                  </div>
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">UN No</label>
+                    <input type="text" class="form-control" id="UNNo" placeholder="UN No" value="UN 3013" required>
+                  </div>
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Gr. Wt. (MT)</label>
+                    <input type="text" class="form-control" id="grossWeight" placeholder="Enter Gross Weight" value=""
+                      required>
+                  </div>
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Volume (CBM)</label>
+                    <input type="text" class="form-control" id="volume" placeholder="Enter Volume" required>
+                  </div>
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">SOC</label><br>
+                    <div class="onoffswitch">
+                      <input type="checkbox" id="shipperOwnedContainer" class="onoffswitch-checkbox">
+                      <label class="onoffswitch-label" style="color:white;">
+                        <span class="onoffswitch-inner" data-swchon-text="YES" data-swchoff-text="NO"></span>
+                        <span class="onoffswitch-switch"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Status</label>
+                    <select name="Status" id="StatusShipmentDetail" class="form-control">
+                      <option value="1">Approved</option>
+                      <option value="4">Counter</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <br>
+                    <button type="button" class="btn btn-default buttonMargin buttonBorder btn-success" style="
+                                        margin-top: 9px;"><i class=" fa fa-plus " aria-hidden="true "></i>
+                      Add Shipment</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div>
+                    <div class="widget-body">
+                      <div sa-widget [editbutton]="false" color="blueDark">
+                        <header>
+                          <span class="widget-icon"> <i class="fa fa-table"></i> </span>
+                          <h2>Shipment Details </h2>
+                        </header>
+                      </div>
+                      <div class="col-sm-12 col-md-12 col-lg-12 ">
+                        <sa-datatable [options]="{
+                                                    ajax: 'assets/api/tables/RR.json',
+                                                     columns: [
+                                                     {data: 'POR'},
+                                                     {data: 'PFD'},
+                                                     {data: 'ROUTE'},
+                                                     {data: 'EquipmentType'},
+                                                     {data: 'SOC'},
+                                                     {data: 'QRY'},
+                                                     {data: 'PRODUCT_GROUP'},
+                                                     {data: 'PRODUCT'},
+                                                     {data: 'GR_WT'},
+                                                     {data: 'VOLUME'},
+                                                
+                                                     {data: 'STATUS'}
+                                                     ],
+                                                     buttons: [
+                                                     'colvis'
+                                                     ]
+                                                     }" tableClass="table table-striped table-bordered table-hover">
+                          <thead>
+                            <tr>
+                              <th>POR</th>
+                              <th>PFD</th>
+                              <th data-hide="phone,tablet">Route</th>
+                              <th data-hide="phone,tablet">Equipment Type</th>
+                              <th data-hide="phone,tablet">SOC</th>
+                              <th data-class="expand">QTY</th>
+                              <th data-hide="phone,tablet">Product Group</th>
+                              <th data-hide="phone,tablet">Proper Shipping Name</th>
+                              <th data-hide="phone,tablet">Gr. Wt (MT)</th>
+                              <th data-hide="phone,tablet">Volume (CBM)</th>
+                              <th data-hide="phone,tablet">Status</th>
+                            </tr>
+                          </thead>
+                        </sa-datatable>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="step-pane" data-step="3">
+              <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                  <div class="panel-title panelHeading pull-left" style="
+                    margin-top: 6px;">
+                    <b>Rate Detail <span class='redIcon'>
+                      </span></b> <label class="badge badgeMargin">
+                    </label>
+                  </div>
+                  <div class="pull-right buttonGroup">
+                    <!-- <button type="button" class="btn btn-default buttonMargin buttonBorder"><i
+                                    class="fa fa-paperclip violetIcon" aria-hidden="true"></i>
+                                Attachment</button>
+                            <button type="button" class="btn btn-default buttonMargin buttonBorder" (click)='saveBooking()'><i class="glyphicon glyphicon-floppy-disk greenIcon"
+                                    aria-hidden="true"></i> Save</button> -->
+                    <button type="button" class="btn btn-default buttonMargin buttonBorder" (click)="lgModal.show()"><i
+                        class=" fa fa-gift " aria-hidden="true "></i>
+                      Free Days</button>
+                    <button type="button " class="btn btn-default buttonMargin buttonBorder "
+                      (click)='lgDetentionModal.show()'><i class="fa fa-money " aria-hidden="true "></i>
+                      Detention</button>
+                  </div>
+                </div>
+              </div>
+              <div class='container-fluid'>
+                <div class="row rowSpacing buttonSpacing">
+                  <!-- <input type="button" class="btn btn-sm btn-primary btn-prev buttonMargin buttonBorder" title="Approve"
+                    value="Approve" /> -->
+                  <button type="button " class="btn btn-default buttonMargin buttonBorder btn-sm"
+                    style="background:#99CC33 !important;color: white"><i class="fa fa-thumbs-o-up fa-fw"
+                      aria-hidden="true "></i>
+                    Approved</button>
+                  <button type="button " class="btn btn-default buttonMargin buttonBorder btn-sm"
+                    style="background:#F99B38 !important;color: white"><i class="fa fa-thumbs-o-down fa-fw"
+                      aria-hidden="true "></i>
+                    Rejected</button>
+                  <button type="button " class="btn btn-default buttonMargin buttonBorder btn-sm"
+                    style="background:#3297FE !important;color: white"><i class="fa fa-exchange fa-fw"
+                      aria-hidden="true "></i>
+                    Counter</button>
+                </div>
+
+                <div class="row">
+                  <!-- <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Reference Number</label>
+                    <input type="text" class="form-control" id="refNum" placeholder="Reference Number" value="" required
+                      readonly>
+                  </div> -->
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Charge Element<span class='redIcon'>
+                        *</span></label>
+                    <select name="ChargeHead" class="form-control">
+                      <option value="1">Freight Rate</option>
+                      <option value="2">Surcharge</option>
+                      <option value="3">Insurance</option>
+                      <option value="4">Load Terminal handling Charge</option>
+                      <option value="5">Discharge Terminal handling Charge</option>
+                    </select>
+                  </div>
+
+                  <!-- <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Quantity<span class='redIcon'>
+                        *</span></label> -->
+                  <!-- <input class="form-control spinner-left spinner" name="Quantityspiner" value="1" [saUiSpinner]> -->
+                  <!-- <input type="text" class="form-control" id="quantity" placeholder="Enter Quantity" value="1"
+                    required> -->
+                  <!-- <input type="text" class="form-control" id="quantity" placeholder="Enter Quantity" value="1"
+                    required>
+                  </div> -->
+
+                  <div class="col-lg-3 col-md-4 col-sm-6 rowSpacing ">
+                    <label class="labelText ">Currency<span class='redIcon'>
+                        *</span></label>
+                    <!-- <input class="form-control spinner-both spinner " name="spinner-currency " value="5.00 " saUiSpinner="decimal "> -->
+                    <select name="interested " class="form-control " id=" ">
+                      <option value="1 ">AED</option>
+                      <option value="2 ">USD</option>
+                      <option value="2 ">INR</option>
+                    </select>
+                  </div>
+
+                  <!-- <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Rate</label>
+                    <input type="text" class="form-control" id="Rate" placeholder="Rate" value=""
+                      required readonly>
+                  </div> -->
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Request Rate (Per Tank)<span class='redIcon'>
+                        *</span></label>
+                    <input type="text" class="form-control" id="requestRate" placeholder="Request Rate" value="1600.00"
+                      required>
+                  </div>
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Approved Rate (Per Tank)<span class='redIcon'>
+                        *</span></label>
+                    <input type="text" class="form-control" id="approvedRate" placeholder="Approved Rate"
+                      value="1652.00" required>
+                  </div>
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Request Rate in USD</label>
+                    <input type="text" class="form-control" id="requestRateInUSD" placeholder="Request Rate in USD"
+                      value="435.58" required readonly>
+                  </div>
+
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <label class="labelText">Approved Rate in USD</label>
+                    <input type="text" class="form-control" id="ApprovedRateInUSD" placeholder="Approved Rate in USD"
+                      value="449.19" required readonly>
+                  </div>
+                  <div class="col-lg-3  col-md-4 col-sm-6 rowSpacing">
+                    <br>
+                    <button type="button" class="btn btn-default buttonMargin buttonBorder btn-success" style="
+                                            margin-top: 9px;"><i class=" fa fa-plus " aria-hidden="true "></i>
+                      Add Charge</button>
+                  </div>
+
+
+                </div>
+
+
+
+                <div class="row">
+                  <div>
+                    <div class="widget-body">
+                      <div sa-widget [editbutton]="false" color="blueDark">
+                        <header>
+                          <span class="widget-icon"> <i class="fa fa-table"></i> </span>
+                          <h2>Rate Details </h2>
+                        </header>
+                      </div>
+                      <div class="col-sm-12 col-md-12 col-lg-12 ">
+                        <sa-datatable [options]="{
+                          
+                                                    ajax: 'assets/api/tables/RR_RateDetail.json',
+                                                     columns: [
+                                                     {data: 'ChargeHead'},
+                                                     {data: 'VATOS'},
+                                                     {data: 'Currency'},
+                                                     {data: 'RateRequest'},
+                                                     {data: 'ApprovedRate'},
+                                                     {data: 'RateRequestInUSD'},
+                                                     {data: 'ApprovedRateInUSD'}
+                                                     ],
+                                                     buttons: [
+                                                     'colvis'
+                                                     ]
+                                                     }" paginationLength="false" tableClass="table
+                                                     table-striped
+                                                     table-bordered table-hover">
+                          <thead>
+                            <tr>
+                              <th data-hide="phone,tablet">Charge Element</th>
+                              <th data-hide="phone,tablet">VATOS</th>
+                              <th data-class="expand">Currency</th>
+                              <th data-hide="phone,tablet">Rate Request</th>
+                              <th data-hide="phone,tablet">Approved Rate</th>
+                              <th data-hide="phone,tablet">Rate Request In USD</th>
+                              <th data-hide="phone,tablet">Approved Rate In USD</th>
+                            </tr>
+                          </thead>
+                        </sa-datatable>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+              <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title">Detention Free Days</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="col-lg-6 col-md-6 col-sm-6 rowSpacing ">
+                        <label class="labelText ">Free Days for Port of Loading</label>
+                        <input type="text " class="form-control " id="totalamount " placeholder="Enter total amount "
+                          value="7" required readonly>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 rowSpacing ">
+                        <label class="labelText ">Free Days for Port of Discharge</label>
+                        <input type="text " class="form-control " id="totalamount " placeholder="Enter total amount "
+                          value="21" required readonly>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" (click)="lgModal.hide()">
+                        Cancel
+                      </button>
+                      <button type="button" class="btn btn-primary" (click)="lgModal.hide()"><i
+                          class="fa fa-floppy-o"></i>
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div bsModal #lgDetentionModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" (click)="lgDetentionModal.hide()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title">Detention Details</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <label class="labelText ">Export Detention</label>
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Up to Days</th>
+                              <th scope="col">Rate </th>
+                              <th scope="col">Approved Rate </th>
+                              <th scope="col">Comments </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">20</th>
+                              <td>50.00</td>
+                              <td>55.00</td>
+                              <td>NA</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">40</th>
+                              <td>80.00</td>
+                              <td>85.00</td>
+                              <td>NA</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">999</th>
+                              <td>100.00</td>
+                              <td>100.00</td>
+                              <td>NA</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <label class="labelText ">Import Detention</label>
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Up to Days</th>
+                              <th scope="col">Rate </th>
+                              <th scope="col">Approved Rate </th>
+                              <th scope="col">Comments </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">20</th>
+                              <td>55.00</td>
+                              <td>60.00</td>
+                              <td>NA</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">40</th>
+                              <td>85.00</td>
+                              <td>90.00</td>
+                              <td>NA</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">999</th>
+                              <td>110.00</td>
+                              <td>110.00</td>
+                              <td>NA</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" (click)="lgDetentionModal.hide()">
+                        Cancel
+                      </button>
+                      <button type="button" class="btn btn-primary" (click)="lgDetentionModal.hide()"><i
+                          class="fa fa-floppy-o"></i>
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="step-pane" data-step="4">
+              <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                  <div class="panel-title panelHeading pull-left" style="
+                        margin-top: 6px;">
+                    <b>Route Detail <span class='redIcon'>
+                      </span></b> <label class="badge badgeMargin">
+                    </label>
+                  </div>
+                  <div class="pull-right buttonGroup">
+                      <button type="button" class="btn btn-default buttonMargin buttonBorder btn-info"><i
+                          class="fa fa-paperclip violetIcon" aria-hidden="true" title="Attachment"></i>
+                      </button>
+                      <button type="button" class="btn btn-default buttonMargin buttonBorder btn-warning"><i
+                          class="fa fa-print violetIcon" aria-hidden="true" title="Print"></i></button>
+                      <button type="button" class="btn btn-default buttonMargin buttonBorder btn-success"
+                        (click)='saveBooking()'><i class="glyphicon glyphicon-floppy-disk greenIcon" aria-hidden="true"
+                          title="Save"></i> </button>
+                    </div>
+                </div>
+              </div>
+              <div sa-widget [editbutton]="false" color="blueDark">
+                <header>
+                  <span class="widget-icon"> <i class="fa fa-table"></i> </span>
+                  <h2>Route Details </h2>
+                </header>
+              </div>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12 ">
+                    <sa-datatable [options]="{
+                          
+                                                    ajax: 'assets/api/tables/RR_RouteDetail.json',
+                                                     columns: [
+                                                     {data: 'FromPort'},
+                                                     {data: 'ToPort'},
+                                                     {data: 'TransportMode'},
+                                                     {data: 'TransitTime'},
+                                                     {data: 'AwaitingTime'},
+                                                     {data: 'VeselVoyage'},
+                                                     {data: 'Terminal'},
+                                                     {data: 'CutOffDateTime'},
+                                                     {data: 'ETD'},
+                                                     {data: 'ETA'}
+                                                     ],
+                                                     buttons: [
+                                                     'colvis'
+                                                     ]
+                                                     }" tableClass="table
+                                                     table-striped
+                                                     table-bordered table-hover">
+                      <thead>
+                        <tr>
+                          <th data-hide="phone,tablet">From Port</th>
+                          <th data-hide="phone,tablet">To Port</th>
+                          <th data-hide="phone,tablet">Transport Mode </th>
+                          <th data-class="expand"> Transit Time in Days</th>
+                          <th data-hide="phone,tablet">Awaiting Time in Days</th>
+                          <th data-hide="phone,tablet">Vessel - Voyage</th>
+                          <th data-hide="phone,tablet">Terminal</th>
+                          <th data-hide="phone,tablet"> Cut-Off Date Time</th>
+                          <th data-hide="phone,tablet">ETD Date Time</th>
+                          <th data-hide="phone,tablet">ETA Date Time</th>
+                        </tr>
+                      </thead>
+                    </sa-datatable>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </fuel-ux-wizard>
+    </div>
+  </div>

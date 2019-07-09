@@ -1,0 +1,82 @@
+{
+    "aaData": [{
+            "TariffReferenceNo": "PTJEA2019001",
+            "ChargeElement": "Freight Rate",
+            "Currency": "AED",
+            "Amount": "1600.00",
+            "TotalAmount": "3200.00",
+            "ExchangeRate": "0.27",
+            "Amountincompanycurrency": "871.15",
+            "PaymentTerms": "Prepaid",
+            "PayLocation": "Jebel Ali",
+            "PayBy": "SH",
+            "RateType": "<i class='fa fa-pencil'></i>"
+        },
+        {
+            "TariffReferenceNo": "NA",
+            "ChargeElement": "Insurance",
+            "Currency": "USD",
+            "Amount": "20.00",
+            "TotalAmount": "100.00",
+            "ExchangeRate": "1.00",
+            "Amountincompanycurrency": "100.00",
+            "PaymentTerms": "Prepaid",
+            "PayLocation": "Jebel Ali",
+            "PayBy": "SH",
+            "RateType": "<i class='fa fa-pencil'></i>"
+        },
+        {
+            "TariffReferenceNo": "THCJEA2019001",
+            "ChargeElement": "Load Terminal Handling Charge",
+            "Currency": "AED",
+            "Amount": "320.00",
+            "TotalAmount": "1600.00",
+            "ExchangeRate": "0.27",
+            "Amountincompanycurrency": "435.58",
+            "PaymentTerms": "Prepaid",
+            "PayLocation": "Jebel Ali",
+            "PayBy": "SH",
+            "RateType": "<i class='fa fa-pencil'></i>"
+        },
+        {
+            "TariffReferenceNo": "THCJEA2019002",
+            "ChargeElement": "Discharge Terminal Handling Charge",
+            "Currency": "USD",
+            "Amount": "240.00",
+            "TotalAmount": "1200.00",
+            "ExchangeRate": "1.00",
+            "Amountincompanycurrency": "1200.00",
+            "PaymentTerms": "Collect",
+            "PayLocation": "Chennai",
+            "PayBy": "CN",
+            "RateType": "<i class='fa fa-pencil'></i>"
+        },
+        {
+            "TariffReferenceNo": "NA",
+            "ChargeElement": "BL Fee",
+            "Currency": "USD",
+            "Amount": "10.00",
+            "TotalAmount": "50.00",
+            "ExchangeRate": "1.00",
+            "Amountincompanycurrency": "50.00",
+            "PaymentTerms": "Prepaid",
+            "PayLocation": "Jebel Ali",
+            "PayBy": "SH",
+            "RateType": "<i class='fa fa-pencil'></i>"
+        },
+        {
+            "TariffReferenceNo": "NA",
+            "ChargeElement": "Agency Commission",
+            "Currency": "USD",
+            "Amount": "15.00",
+            "TotalAmount": "45.00",
+            "ExchangeRate": "1.00",
+            "Amountincompanycurrency": "45.00",
+            "PaymentTerms": "Prepaid",
+            "PayLocation": "Jebel Ali",
+            "PayBy": "SH",
+            "RateType": "<i class='fa fa-pencil'></i>"
+        }
+
+    ]
+}
